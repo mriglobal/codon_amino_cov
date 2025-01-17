@@ -3,7 +3,8 @@
 # Repo organization
 
  - /data
-	 - Contains all of the results summary, persistent model objects, and other data summaries used in the paper
+	 - supplementary_data1.zip contains all of the results summary, persistent model objects, and other data summaries used in the paper
+	 - seq_data.zip contains all of the sequence data and label metadata used in the modeling
  - /routines
 	 - Contains the scripts used to fit the RSCU, Codon, and Amino Acid Frequencies models
  - /utils
