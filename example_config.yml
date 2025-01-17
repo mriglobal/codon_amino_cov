@@ -1,0 +1,18 @@
+seqs: ""
+meta: ""
+output_dir: ""
+model_type: "logit__nucleocapsid_CDS"
+feature_type: "amino"
+resample: 4000
+n_splits: 30
+n_iter: 1000
+test_groups: ["1_1335626", "0_693997"]
+CV_params:
+    logit__C:
+        a: .0001
+        b: 1.0
+    logit__tol:
+        a: .000001
+        b: 1.0
+cache_path: null
+
