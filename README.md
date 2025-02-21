@@ -2,9 +2,7 @@
 
 # Repo organization
 
- - /data
-	 - supplementary_data1.zip contains all of the results summary, persistent model objects, and other data summaries used in the paper
-	 - seq_data.zip contains all of the sequence data and label metadata used in the modeling
+ -Model data, sequence data, and modeling summary files are available at https://doi.org/10.5281/zenodo.14851561. The repository contains a README file that explains the organization of the Supplementary Data.
  - /routines
 	 - Contains the scripts used to fit the RSCU, Codon, and Amino Acid Frequencies models
  - /utils
@@ -13,14 +11,14 @@
  - /configuration_files
 	 - Example YAML files used in conjunction with model scripts
 
-environment.yaml - Environment YAML file needed to recreate the python environment.
+requirements.txt - A concise list of the dependencies needed to recreate the modeling environment
 
 ## Environment Setup
 
 To install the dependencies to run the models after cloning this repo:
 
 
-    conda env create -f environment.yml
+    conda create --name codon_amino_cov --file requirements.tx
 
 Activate the environment:
 
@@ -28,13 +26,12 @@ Activate the environment:
 
 ## Load model and test on new data
 
-Unzip the data located in /data
+Download the data from the Zenodo repository and unzip in a local directory
 
-    unzip codon_amino_cov.zip
+    unzip codon_amino_rscu_final.zip
 
 While in the repository directory start up a Jupyter notebook:
 
     jupyter notebook --port=8883
 
-Replace the empty path strings with the locations of the /utils directory for this repository, the models of interest and the data you want to inference on and run the notebook cells.
-
+Replace the empty path strings in the sys.path with the locations of the /utils directory for this repository. Instructions on how to load the models of interest and the data you want to inference on are located in the comments of the notebook cells.
